@@ -15,8 +15,8 @@ document.addEventListener('click', printMousePos);
 
 function printMousePos(e) {
     document.querySelector('.frame').style.visibility = 'visible';
-    document.querySelector('.frame').style.top = Math.min((document.body.scrollHeight-256),(e.pageY-128)) +'px';
-    document.querySelector('.frame').style.left = Math.min((document.body.scrollWidth-256),(e.pageX-128)) +'px';
+    document.querySelector('.frame').style.top = Math.min((document.body.scrollHeight-128),(e.pageY-64)) +'px';
+    document.querySelector('.frame').style.left = Math.min((document.body.scrollWidth-128),(e.pageX-64)) +'px';
 }
 
 
@@ -53,16 +53,12 @@ function socialIconsF() {
 };
 
 let a = '';
-let b = '';
 let d = `<div class="triangle-1"></div><div class="c"></div>`;
-for (let i = 1; i <= 36; i++) {
-  b += `<div class="hill-fgt-${i}">+</div>`
-};
 for (let i = 1; i <= 4; i++) {
   d += `<div class="hill-bg-${i}"></div><div class="hill-fgg-${i}"></div>`
 };
 for (let i = 1; i <= 12; i++) {
   a += `<div class="line-${i}"></div>`
 };
-document.querySelector(".frame").innerHTML = (b + d)
+document.querySelector(".frame").innerHTML = d
 document.querySelector(".triangle-1").innerHTML = a;

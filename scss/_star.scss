@@ -34,20 +34,6 @@
     transform: scale(0.93);
 }
 
-@for $i from 1 through 36 {
-    .hill-fgt-#{$i} {
-        position: absolute;
-        height: $spell-height/1.9;
-        width: $spell-height/1.9;
-        color: $out-ring-color;
-        animation: rotate-text-#{$i} 15s linear infinite;
-    }
-    .about .hill-fgt-#{$i} {
-        height: $spell-height/2.7;
-        width: $spell-height/2.7;
-    }
-}
-
 @for $i from 1 through 4 {
     .hill-fgg-#{$i} {
         @extend .hill-bg;
@@ -72,7 +58,7 @@
         transform: scale(2.5);
         border: 1px solid #fa95428e;
         background: #fa95428e;
-        box-shadow: 0 0 1.5rem #fa9542;
+        box-shadow: 0 0 1rem #fa9542;
         cursor: pointer;
     }
 }
@@ -100,28 +86,17 @@
     }
 }
 
-@for $i from 1 through 36 {
-    @keyframes rotate-text-#{$i} {
-        from {
-            transform: rotate(10*$i + deg);
-        }
-
-        to {
-            transform: rotate(360 + 10*$i + deg);
-        }
-    }
-}
-
 .triangle-1 {
     position: relative;
     width: $spell-height/2.5;
     height: $spell-height/2.5;
     animation: rotate-1 10s linear infinite;
+    z-index: 3;
 }
 
 .line {
     position: absolute;
-    z-index: 9;
+    z-index: 3;
     width: 86.6%;
     border-style: solid none none none;
     border: 1px dotted $out-ring-color;

@@ -62,11 +62,11 @@
     }
 
     .study {
-        width: 15vw;
+        width: 20vw;
         margin: 2rem auto 0 auto;
         display: grid;
         text-align: center;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
         grid-column-gap: 2rem;
 
         &_serf {
