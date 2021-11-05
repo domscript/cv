@@ -15,7 +15,7 @@ document.addEventListener('click', printMousePos);
 
 function printMousePos(e) {
     document.querySelector('.frame').style.visibility = 'visible';
-    document.querySelector('.frame').style.top = Math.min((document.body.scrollHeight-128),(e.pageY-64)) +'px';
+    document.querySelector('.frame').style.top = Math.max(50, (Math.min((document.body.scrollHeight-128),(e.pageY-64)))) +'px';
     document.querySelector('.frame').style.left = Math.min((document.body.scrollWidth-128),(e.pageX-64)) +'px';
 }
 
