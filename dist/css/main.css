@@ -25,7 +25,7 @@
 
 .home {
   height: 100%;
-  padding-top: 57vh;
+  padding-top: 55vh;
   overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -37,7 +37,7 @@
 }
 
 .home_name {
-  font-size: 5rem;
+  font-size: 4rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 2px solid #fff;
@@ -431,7 +431,7 @@
 
 .contact {
   height: 100%;
-  padding-top: 57vh;
+  padding-top: 55vh;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -458,26 +458,42 @@
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  grid-row-gap: 2rem;
-  font-size: 1.5rem;
+  grid-row-gap: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .contact .text-secondary {
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .contact .social-icons {
   position: initial;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 768px) {
   .menu-btn {
     visibility: hidden;
   }
-  .home,
+  .home {
+    padding-top: 65vh;
+  }
+  .home_name {
+    font-size: 5rem;
+  }
   .contact {
     padding-top: 65vh;
+  }
+  .contact .text-secondary {
+    margin-top: 0.5rem;
+  }
+  .contact_list {
+    grid-row-gap: 2rem;
+    font-size: 1.5rem;
+  }
+  .contact .social-icons {
+    position: initial;
+    margin-top: 3rem;
   }
   .nav {
     visibility: visible;

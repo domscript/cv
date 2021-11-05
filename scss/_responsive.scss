@@ -3,9 +3,29 @@
         visibility: hidden;
     }
 
-    .home,
+    .home {
+        padding-top: 65vh;
+        &_name {
+            font-size: 5rem;
+        }
+    }
+
     .contact {
         padding-top: 65vh;
+
+        .text-secondary {
+            margin-top: 0.5rem;
+        }
+
+        &_list {
+            grid-row-gap: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .social-icons {
+            position: initial;
+            margin-top: 3rem;
+        }
     }
 
     .nav {

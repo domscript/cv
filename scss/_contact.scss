@@ -1,6 +1,6 @@
 .contact {
     height: 100%;
-    padding-top: 57vh;
+    padding-top: 55vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -20,17 +20,17 @@
     &_list {
         display: grid;
         grid-template-columns: 1fr;
-        grid-row-gap: 2rem;
-        font-size: 1.5rem;
+        grid-row-gap: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .text-secondary {
-        margin-top: 0.5rem;
+        margin-top: 0.25rem;
     }
 
     .social-icons {
         position: initial;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 
 }
