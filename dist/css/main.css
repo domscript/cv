@@ -471,6 +471,11 @@
   margin-top: 2rem;
 }
 
+.contact footer {
+  -webkit-transform: rotate(-90deg) translate(3.5rem, 4rem);
+          transform: rotate(-90deg) translate(3.5rem, 4rem);
+}
+
 @media screen and (min-width: 768px) {
   .menu-btn {
     visibility: hidden;
@@ -494,6 +499,10 @@
   .contact .social-icons {
     position: initial;
     margin-top: 3rem;
+  }
+  .contact footer {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   .nav {
     visibility: visible;
