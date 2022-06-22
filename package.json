@@ -1,0 +1,40 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dominic-N1/cv.git"
+  },
+  "keywords": [],
+  "author": "Dominic-N1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dominic-N1/cv/issues"
+  },
+  "homepage": "https://github.com/Dominic-N1/cv",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "html-loader": "^3.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "node-sass": "^7.0.1",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "ejs": "^3.1.8"
+  }
+}
