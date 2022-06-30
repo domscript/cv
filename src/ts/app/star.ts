@@ -1,7 +1,7 @@
 "use strict";
 
-export const printMousePos = function (e) {
-  const starShape = document.querySelector(".frame");
+export const printMousePos = function (e: any) {
+  const starShape = document.querySelector<HTMLElement>(".frame");
   starShape.style.visibility = "visible";
   starShape.style.top =
     Math.max(50, Math.min(document.body.scrollHeight - 128, e.pageY - 64)) +
@@ -19,6 +19,6 @@ export const writeStar = function () {
   for (let i = 1; i <= 12; i++) {
     a += `<div class="line-${i}"></div>`;
   }
-  document.querySelector(".frame").innerHTML = d;
-  document.querySelector(".triangle-1").innerHTML = a;
+  document.querySelector<HTMLElement>(".frame").innerHTML = d;
+  document.querySelector<HTMLElement>(".triangle-1").innerHTML = a;
 };

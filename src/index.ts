@@ -1,5 +1,5 @@
-import { printMousePos, writeStar } from "./js/app/star";
-import { init } from "./js/app/main";
+import { printMousePos, writeStar } from "./ts/app/star";
+import { init } from "./ts/app/main";
 import "./scss/main.scss";
 
 init();
