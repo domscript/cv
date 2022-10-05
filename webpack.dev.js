@@ -1,42 +1,37 @@
-const path = require("path");
 const common = require("./webpack.common");
 const { merge } = require("webpack-merge");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 module.exports = merge(common, {
   mode: "development",
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "./src/index.html",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "about.html",
-      template: "src/about.html",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "contact.html",
-      template: "src/contact.html",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "projects.html",
-      template: "src/projects.html",
-    }),
-  ],
+  entry: "./src/index.ts",
+  target: "web",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].js",
+    assetModuleFilename: "images/[name][ext]",
+  },
+  devtool: "source-map",
+  devServer: {
+    port: 8080,
+    hot: "only",
+    static: {
+      directory: path.join(__dirname, "./"),
+      serveIndex: true,
+    },
+  },
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.(ts|tsx)$/i,
+        exclude: /node_modules/,
+        use: ["babel-loader", "ts-loader"],
       },
       {
-        test: /\.tsx?$/,
-        use: "ts-loader",
+        test: /\.(s[ac]|c)ss$/i,
         exclude: /node_modules/,
+        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
       },
     ],
-  },
-  resolve: {
-    extensions: [".tsx", ".ts", ".js"],
   },
 });

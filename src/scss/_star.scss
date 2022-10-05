@@ -46,8 +46,8 @@
 
 .c {
   @extend .hill-bg;
-  height: $spell-height/5;
-  width: $spell-height/5;
+  height: calc($spell-height / 5);
+  width: calc($spell-height / 5);
   border-radius: 50%;
   border: 1px solid #ebeae9;
   box-shadow: 0 0 20px #ff841f;
@@ -87,8 +87,8 @@
 
 .triangle-1 {
   position: relative;
-  width: $spell-height/2.5;
-  height: $spell-height/2.5;
+  width: calc($spell-height / 2.5);
+  height: calc($spell-height / 2.5);
   animation: rotate-1 10s linear infinite;
   z-index: 3;
 }

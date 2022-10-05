@@ -1,22 +1,38 @@
-const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/index.ts",
+    main: "./src/index.js",
+    vendor: "./src/vendor.js",
+  },
+  resolve: {
+    extensions: [".ts", ".js", ".json"],
   },
   module: {
     rules: [
       {
-        test: /\.html$/,
-        use: ["html-loader"],
-      },
-      {
-        test: /\.(svg|png|jpg|gif|ico)$/,
+        test: /\.(svg|png|jpg|gif)$/,
         type: "asset/resource",
       },
+
+      { test: /\.html$/i, use: ["html-loader"] },
     ],
   },
-  stats: {
-    children: true,
-  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "about.html",
+      template: "./src/about.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "contact.html",
+      template: "./src/contact.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "projects.html",
+      template: "./src/projects.html",
+    }),
+  ],
 };
