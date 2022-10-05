@@ -1,178 +1,175 @@
 // @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
-@import 'config';
+@import "config";
 
 .frame {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: $spell-height*0.8;
-    height: $spell-height*0.8;
-    border-radius: 2px;
-    overflow: hidden;
-    visibility: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $spell-height * 0.8;
+  height: $spell-height * 0.8;
+  border-radius: 2px;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 @for $i from 1 through 2 {
-    .hill-bg-#{$i} {
-        @extend .hill-bg;
-        height: $spell-height*(1 - 0.2*$i);
-        width: $spell-height*(1- 0.2*$i);
-    }
+  .hill-bg-#{$i} {
+    @extend .hill-bg;
+    height: $spell-height * (1 - 0.2 * $i);
+    width: $spell-height * (1- 0.2 * $i);
+  }
 
-    .hill-bg-1 {
-        transform: scale(0.9);
-    }
+  .hill-bg-1 {
+    transform: scale(0.9);
+  }
 
-    .hill-bg-2 {
-        transform: scale(0.9);
-    }
+  .hill-bg-2 {
+    transform: scale(0.9);
+  }
 }
 
 .hill-bg-0 {
-    @extend .hill-bg;
-    transform: scale(0.93);
+  @extend .hill-bg;
+  transform: scale(0.93);
 }
 
 @for $i from 1 through 4 {
-    .hill-fgg-#{$i} {
-        @extend .hill-bg;
-        border-radius: 0%;
-        width: $spell-height*0.5;
-        height: $spell-height*0.5;
-        animation: rotate-back-#{$i} 10s linear infinite;
-    }
+  .hill-fgg-#{$i} {
+    @extend .hill-bg;
+    border-radius: 0%;
+    width: $spell-height * 0.5;
+    height: $spell-height * 0.5;
+    animation: rotate-back-#{$i} 10s linear infinite;
+  }
 }
 
 .c {
-    @extend .hill-bg;
-    height: $spell-height/5;
-    width: $spell-height/5;
-    border-radius: 50%;
-    border: 1px solid #ebeae9;
-    box-shadow: 0 0 20px #ff841f;
-    transition: all 0.7s;
-    z-index: 4;
+  @extend .hill-bg;
+  height: $spell-height/5;
+  width: $spell-height/5;
+  border-radius: 50%;
+  border: 1px solid #ebeae9;
+  box-shadow: 0 0 20px #ff841f;
+  transition: all 0.7s;
+  z-index: 4;
 
-    &:hover {
-        transform: scale(2.5);
-        border: 1px solid #fa95428e;
-        background: #fa95428e;
-        box-shadow: 0 0 1rem #fa9542;
-        cursor: pointer;
-    }
+  &:hover {
+    transform: scale(2.5);
+    border: 1px solid #fa95428e;
+    background: #fa95428e;
+    box-shadow: 0 0 1rem #fa9542;
+    cursor: pointer;
+  }
 }
-
 
 @for $i from 1 through 5 {
-    @keyframes rotate-#{$i} {
-        from {
-            transform: rotate((-22.5 + 22.5*$i) + deg);
-        }
-
-        to {
-            transform: rotate((360 - 22.5 + 22.5*$i) + deg);
-        }
-    }
-
-    @keyframes rotate-back-#{$i} {
-        from {
-            transform: rotate((360 + 22.5 - 22.5*$i) + deg);
-        }
-
-        to {
-            transform: rotate((0 + 22.5 - 22.5*$i) + deg);
-        }
-    }
-}
-
-.triangle-1 {
-    position: relative;
-    width: $spell-height/2.5;
-    height: $spell-height/2.5;
-    animation: rotate-1 10s linear infinite;
-    z-index: 3;
-}
-
-.line {
-    position: absolute;
-    z-index: 3;
-    width: 86.6%;
-    border-style: solid none none none;
-    border: 1px dotted $out-ring-color;
-    box-shadow: 0 0 10px 0 $out-ring-color;
-    left: 6.7%;
-    filter: blur(1px);
-}
-
-@for $i from 1 through 12 {
-    .line-#{$i} {
-        @extend .line;
-        transform: rotate(30 - 30*$i + deg);
-    }
-
-    .line-1 {
-        bottom: 25%;
-    }
-
-    .line-2,
-    .line-12,
-    .line-6,
-    .line-8 {
-        bottom: 28.35%;
-        left: 19.2%;
-    }
-
-    .line-3,
-    .line-11 {
-        bottom: 37.35%;
-        left: 28.35%;
-    }
-
-    .line-4,
-    .line-10 {
-        bottom: 50%;
-        left: 31.7%;
-    }
-
-    .line-5,
-    .line-9 {
-        bottom: 62.5%;
-        left: 28.35%;
-    }
-
-    .line-6,
-    .line-8 {
-        bottom: 71.65%;
-    }
-
-    .line-7 {
-        bottom: 75%;
-    }
-
-    .line-8,
-    .line-12 {
-        left: -6.7%;
-    }
-
-    .line-9,
-    .line-11 {
-        left: -14.95%;
-    }
-
-    .line-10 {
-        left: -18.3%;
-    }
-}
-
-
-
-@keyframes rotate-1 {
+  @keyframes rotate-#{$i} {
     from {
-        transform: rotate(0deg);
+      transform: rotate((-22.5 + 22.5 * $i) + deg);
     }
 
     to {
-        transform: rotate(360deg);
+      transform: rotate((360 - 22.5 + 22.5 * $i) + deg);
     }
+  }
+
+  @keyframes rotate-back-#{$i} {
+    from {
+      transform: rotate((360 + 22.5 - 22.5 * $i) + deg);
+    }
+
+    to {
+      transform: rotate((0 + 22.5 - 22.5 * $i) + deg);
+    }
+  }
+}
+
+.triangle-1 {
+  position: relative;
+  width: $spell-height/2.5;
+  height: $spell-height/2.5;
+  animation: rotate-1 10s linear infinite;
+  z-index: 3;
+}
+
+.line {
+  position: absolute;
+  z-index: 3;
+  width: 86.6%;
+  border-style: solid none none none;
+  border: 1px dotted $out-ring-color;
+  box-shadow: 0 0 10px 0 $out-ring-color;
+  left: 6.7%;
+  filter: blur(1px);
+}
+
+@for $i from 1 through 12 {
+  .line-#{$i} {
+    @extend .line;
+    transform: rotate(30 - 30 * $i + deg);
+  }
+
+  .line-1 {
+    bottom: 25%;
+  }
+
+  .line-2,
+  .line-12,
+  .line-6,
+  .line-8 {
+    bottom: 28.35%;
+    left: 19.2%;
+  }
+
+  .line-3,
+  .line-11 {
+    bottom: 37.35%;
+    left: 28.35%;
+  }
+
+  .line-4,
+  .line-10 {
+    bottom: 50%;
+    left: 31.7%;
+  }
+
+  .line-5,
+  .line-9 {
+    bottom: 62.5%;
+    left: 28.35%;
+  }
+
+  .line-6,
+  .line-8 {
+    bottom: 71.65%;
+  }
+
+  .line-7 {
+    bottom: 75%;
+  }
+
+  .line-8,
+  .line-12 {
+    left: -6.7%;
+  }
+
+  .line-9,
+  .line-11 {
+    left: -14.95%;
+  }
+
+  .line-10 {
+    left: -18.3%;
+  }
+}
+
+@keyframes rotate-1 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
