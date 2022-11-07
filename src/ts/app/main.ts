@@ -15,7 +15,7 @@ export const init = function () {
       return `<a href="https://twitter.com/Greater73527025/"><i class="fab fa-twitter fa-2x"></i></a>
         <a href="https://www.facebook.com/vladimir.nosikov/"><i class="fab fa-facebook fa-2x"></i></a>
         <a href="https://www.linkedin.com/in/vladimir-nosikov-b0a2aa206/"><i class="fab fa-linkedin-in fa-2x"></i></a>
-        <a href="https://github.com/Dominic-N1/"><i class="fab fa-github fa-2x"></i></a>`;
+        <a href="https://github.com/domscript/"><i class="fab fa-github fa-2x"></i></a>`;
     }
 
     const socialIcons = document.querySelector<HTMLElement>(".social-icons");
